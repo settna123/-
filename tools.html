@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tools | Elif Al-Fateh</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function cylinderVolume() {
+      let r = parseFloat(prompt("Enter radius:"));
+      let h = parseFloat(prompt("Enter height:"));
+      alert("Volume: " + (Math.PI * r * r * h).toFixed(2));
+    }
+
+    function circleArea() {
+      let r = parseFloat(prompt("Enter radius:"));
+      alert("Area: " + (Math.PI * r * r).toFixed(2));
+    }
+
+    function solveQuadratic() {
+      let a = parseFloat(prompt("Enter a:"));
+      let b = parseFloat(prompt("Enter b:"));
+      let c = parseFloat(prompt("Enter c:"));
+      let d = b*b - 4*a*c;
+      if (d < 0) {
+        alert("No real solutions");
+      } else {
+        let x1 = (-b + Math.sqrt(d)) / (2*a);
+        let x2 = (-b - Math.sqrt(d)) / (2*a);
+        alert("Solutions: x1 = " + x1.toFixed(2) + ", x2 = " + x2.toFixed(2));
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Tools</h1>
+    <p>Useful Calculators</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">My Projects</a>
+    <a href="tools.html">Tools</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Choose a tool:</h2>
+    <button onclick="cylinderVolume()">Cylinder Volume</button><br/><br/>
+    <button onclick="circleArea()">Circle Area</button><br/><br/>
+    <button onclick="solveQuadratic()">Quadratic Solver</button>
+  </section>
+
+</body>
+</html>

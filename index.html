@@ -1,0 +1,46 @@
+.<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elif Al-Fateh | Personal Website</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function toggleLanguage() {
+      const en = document.querySelectorAll('.lang-en');
+      const ar = document.querySelectorAll('.lang-ar');
+      en.forEach(el => el.classList.toggle('hidden'));
+      ar.forEach(el => el.classList.toggle('hidden'));
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1 class="lang-en">Welcome to My Personal Website</h1>
+    <h1 class="lang-ar hidden">مرحباً بك في موقعي الشخصي</h1>
+    <p class="lang-en">I'm Elif Al-Fateh - IT Student, UI Designer</p>
+    <p class="lang-ar hidden">أنا إيلاف الفاتح - طالبة تقنية معلومات، مصممة واجهات</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="projects.html">My Projects</a>
+    <a href="tools.html">Tools</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="hero">
+    <h2 class="lang-en">Hello and Welcome!</h2>
+    <h2 class="lang-ar hidden">أهلاً وسهلاً!</h2>
+    <p class="lang-en">This website showcases my work, tools I've built, and how you can contact me.</p>
+    <p class="lang-ar hidden">هذا الموقع يعرض أعمالي، الأدوات التي أنشأتها، وكيفية التواصل معي.</p>
+
+    <div class="lang-switch">
+      <button onclick="toggleLanguage()">🌐 Switch Language | تغيير اللغة</button>
+    </div>
+  </section>
+
+</body>
+</html>
